@@ -4,7 +4,7 @@ import questionary
 bougth_omikuji = questionary.confirm("おみくじを引きましたか？").ask()
 
 # おみくじを引いた場合のみ質問する
-momikuji_result = (
+omikuji_result = (
     questionary.select(
         "おみくじの結果はどうでしたか？",
         choices=[
@@ -23,7 +23,7 @@ momikuji_result = (
     .ask()
 )
 
-if momikuji_result:
-    print(f"おみくじの結果は{momikuji_result}でした")
+if omikuji_result:
+    print(f"おみくじの結果は{omikuji_result}でした")
 else:
     print("おみくじを引いていないので結果はわかりません")
